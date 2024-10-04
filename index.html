@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تولد ۹ سالگی راهکارگستران</title>
@@ -8,392 +9,292 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/logo.webp" />
     <meta name="theme-color" content="#091438" />
     <style>
-      * {
-        font-family: Yekan Bakh, "sans", serif;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      .dv-container {
-        /* min-width: 390px; */
-        max-width: 432px;
-        overflow: hidden;
-        position: relative;
-        min-height: 100dvh;
-      }
-
-      .dv-main {
-        display: flex;
-        justify-content: center;
-        background: #091438;
-      }
-
-      .dv-video {
-        object-fit: cover;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-      }
-
-      .dv-bg {
-        position: relative;
-        z-index: 2;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .dv-bg img {
-        width: 100%;
-        height: auto;
-      }
-
-      .dv-content {
-        position: absolute;
-        z-index: 2;
-        max-width: 360px;
-        object-fit: cover;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      .dv-cake {
-        position: absolute;
-        z-index: 1;
-        object-fit: contain;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .dv-text {
-        direction: rtl;
-        color: white;
-        min-width: 306px;
-        line-height: 1.5;
-        overflow-wrap: break-word;
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-      }
-
-      .dv-link {
-        padding: 8px 12px;
-        white-space: nowrap;
-        text-decoration: none;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        width: fit-content;
-        margin: 0 auto;
-        border-radius: 8px;
-        border: 2px solid rgba(255, 255, 255, 0.12);
-        background: #1570ef;
-        box-shadow: 0px 12px 16px -4px #175cd3,
-          0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-          position: relative;
-          z-index: 20;
-
-        svg {
-          width: 20px;
-          height: 20px;
+        * {
+            font-family: Yekan Bakh, "sans", serif;
         }
-      }
 
-      .dv-modal {
-        display: none;
-        position: fixed;
-        z-index: 5;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-      .modal-content {
-        background-color: #13131c;
-        padding: 40px;
-        border-radius: 24px;
-        text-align: center;
-        position: relative;
-      }
+        .dv-container {
+            /* min-width: 390px; */
+            max-width: 432px;
+            overflow: hidden;
+            position: relative;
+            min-height: 100dvh;
+        }
 
-      .modal-content img {
-        margin-top: 24px;
-        max-width: 50px;
-        height: auto;
-      }
+        .dv-main {
+            display: flex;
+            justify-content: center;
+            background: #091438;
+        }
 
-      .dv-close {
-        cursor: pointer;
-        margin-top: 20px;
-      }
+        .dv-video {
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
 
-      .dv-modal-text {
-        color: white;
-        font-size: 18px;
-        margin: 20px 0 0 0;
-      }
+        .dv-bg {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            height: auto;
+        }
 
-      .dv-close-button {
-        margin-top: 55px;
-        background-color: #175cd3;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .dv-blur-bg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        bottom: 0;
-        z-index: 2;
-      }
+        .dv-bg img {
+            width: 100%;
+            height: auto;
+        }
 
-      .dv-relative {
-        position: relative;
-        z-index: 3;
-      }
+        .dv-content {
+            position: absolute;
+            z-index: 2;
+            max-width: 360px;
+            object-fit: cover;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-      .dv-trangle {
-        position: absolute;
-        left: -30px;
-        top: 90%;
-        transform: translateY(-50%);
-      }
+        .dv-cake {
+            position: absolute;
+            z-index: 1;
+            object-fit: contain;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-      .dv-circle {
-        border-radius: 40px;
-        background: var(--Blue-600, #1570ef);
-        filter: blur(3px);
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-        position: absolute;
-        right: -30px;
-        bottom: -20%;
-        /* transform: translateY(-50%); */
-      }
+        .dv-text {
+            direction: rtl;
+            color: white;
+            min-width: 306px;
+            line-height: 1.5;
+            overflow-wrap: break-word;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
 
-      .dv-large-triangle {
-        position: absolute;
-        right: 10px;
-        top: 20%;
-        transform: translateY(-50%);
-      }
+        .dv-link {
+            padding: 8px 12px;
+            white-space: nowrap;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            width: fit-content;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            background: #1570ef;
+            box-shadow: 0px 12px 16px -4px #175cd3,
+                0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+            position: relative;
+            z-index: 20;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .dv-modal {
+            display: none;
+            position: fixed;
+            z-index: 5;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #13131c;
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content img {
+            margin-top: 24px;
+            max-width: 50px;
+            height: auto;
+        }
+
+        .dv-close {
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .dv-modal-text {
+            color: white;
+            font-size: 18px;
+            margin: 20px 0 0 0;
+        }
+
+        .dv-close-button {
+            margin-top: 55px;
+            background-color: #175cd3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dv-blur-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .dv-relative {
+            position: relative;
+            z-index: 3;
+        }
+
+        .dv-trangle {
+            position: absolute;
+            left: -30px;
+            top: 90%;
+            transform: translateY(-50%);
+        }
+
+        .dv-circle {
+            border-radius: 40px;
+            background: var(--Blue-600, #1570ef);
+            filter: blur(3px);
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            position: absolute;
+            right: -30px;
+            bottom: -20%;
+            /* transform: translateY(-50%); */
+        }
+
+        .dv-large-triangle {
+            position: absolute;
+            right: 10px;
+            top: 20%;
+            transform: translateY(-50%);
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="dv-relative">
-      <div class="dv-main">
-        <div class="dv-container">
-          <video autoplay loop muted playsinline id="myVideo" class="dv-video">
-            <source src="./assets/video/rg.mp4" type="video/mp4" />
-          </video>
-          <div class="dv-bg">
-            <img src="./assets/images/bg.webp" alt="background" />
-          </div>
-          <div class="dv-content">
-            <img src="./assets/images/logo.webp" alt="logo" class="dv-logo" />
-            <svg
-              class="dv-large-triangle"
-              xmlns="http://www.w3.org/2000/svg"
-              width="42"
-              height="42"
-              viewBox="0 0 42 42"
-              fill="none"
-            >
-              <g filter="url(#filter0_f_11_30)">
-                <path d="M6 36V6L36 36H6Z" fill="#84CAFF" />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_f_11_30"
-                  x="0"
-                  y="0"
-                  width="42"
-                  height="42"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
-                  />
-                  <feGaussianBlur
-                    stdDeviation="3"
-                    result="effect1_foregroundBlur_11_30"
-                  />
-                </filter>
-              </defs>
-            </svg>
-            <p class="dv-text">
-              بسیار خرسندیم که در جشن تولد شرکت راهکارگستران حضور دارید. همراهی
-              شما در این مسیر برای ما ارزشمند بوده و نقش مهمی در رشد و موفقیت ما
-              ایفا خواهد نمود.
-            </p>
-            <div class="dv-circle"></div>
-            <a class="dv-link" href="#" id="openModal">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M5.00006 10.8176L5.00001 15.2889C4.99741 16.255 5.55125 17.1363 6.42288 17.553C8.69417 18.5934 11.3059 18.5934 13.5771 17.553C14.4488 17.1363 15.0026 16.255 15 15.2889L15 10.8334"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16.6667 2.5L11.6667 7.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M7.5 8.33332H9.16667"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8.33335 7.5V9.16667"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M4.16669 2.50001H5.83335"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M4.99998 1.66666V3.33332"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16.4885 6.66667C17.0686 7.03262 17.4432 7.64979 17.5 8.33333C17.5 10.1743 14.1421 11.6667 10 11.6667C5.85787 11.6667 2.5 10.1743 2.5 8.33333C2.5 6.49238 5.85787 5 10 5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span>آماده‌ای برای یه تغییر</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M4.16669 10H15.8334"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8.33335 5.83334L4.16669 10"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8.33335 14.1667L4.16669 10"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <svg
-              class="dv-trangle"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-            >
-              <g filter="url(#filter0_f_11_29)">
-                <path d="M6 26V6L26 26H6Z" fill="#2E90FA" />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_f_11_29"
-                  x="0"
-                  y="0"
-                  width="32"
-                  height="32"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
-                  />
-                  <feGaussianBlur
-                    stdDeviation="3"
-                    result="effect1_foregroundBlur_11_29"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-          <img src="./assets/images/cake.webp" alt="cake" class="dv-cake" />
+        <div class="dv-main">
+            <div class="dv-container">
+                <video autoplay loop muted playsinline id="myVideo" class="dv-video">
+                    <source src="./assets/video/rg.mp4" type="video/mp4" />
+                </video>
+                <div class="dv-bg">
+                    <img src="./assets/images/bg.webp" alt="background" />
+                </div>
+                <div class="dv-content">
+                    <img src="./assets/images/logo.webp" alt="logo" class="dv-logo" />
+                    <svg class="dv-large-triangle" xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                        viewBox="0 0 42 42" fill="none">
+                        <g filter="url(#filter0_f_11_30)">
+                            <path d="M6 36V6L36 36H6Z" fill="#84CAFF" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_11_30" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_11_30" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <p class="dv-text">
+                        بسیار خرسندیم که در جشن تولد شرکت راهکارگستران حضور دارید. همراهی
+                        شما در این مسیر برای ما ارزشمند بوده و نقش مهمی در رشد و موفقیت ما
+                        ایفا خواهد نمود.
+                    </p>
+                    <div class="dv-circle"></div>
+                    <a class="dv-link" href="https://landing.rahkargostaran.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M5.00006 10.8176L5.00001 15.2889C4.99741 16.255 5.55125 17.1363 6.42288 17.553C8.69417 18.5934 11.3059 18.5934 13.5771 17.553C14.4488 17.1363 15.0026 16.255 15 15.2889L15 10.8334"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.6667 2.5L11.6667 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M7.5 8.33332H9.16667" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.33335 7.5V9.16667" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M4.16669 2.50001H5.83335" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M4.99998 1.66666V3.33332" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M16.4885 6.66667C17.0686 7.03262 17.4432 7.64979 17.5 8.33333C17.5 10.1743 14.1421 11.6667 10 11.6667C5.85787 11.6667 2.5 10.1743 2.5 8.33333C2.5 6.49238 5.85787 5 10 5"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>آماده‌ای برای یه تغییر</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4.16669 10H15.8334" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.33335 5.83334L4.16669 10" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.33335 14.1667L4.16669 10" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <svg class="dv-trangle" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 32 32" fill="none">
+                        <g filter="url(#filter0_f_11_29)">
+                            <path d="M6 26V6L26 26H6Z" fill="#2E90FA" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_11_29" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_11_29" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <img src="./assets/images/cake.webp" alt="cake" class="dv-cake" />
+            </div>
         </div>
-      </div>
 
-      <div id="myModal" class="dv-modal">
-        <div class="modal-content">
-          <img src="./assets/images/Hourglass.webp" alt="Hourglass" />
-          <p dir="ltr" class="dv-modal-text">...لطفا یکم بیشتر صبر کنید</p>
-          <button dir="ltr" class="dv-close-button" id="closeModal">
-            ): باشه
-          </button>
+        <div id="myModal" class="dv-modal">
+            <div class="modal-content">
+                <img src="./assets/images/Hourglass.webp" alt="Hourglass" />
+                <p dir="ltr" class="dv-modal-text">...لطفا یکم بیشتر صبر کنید</p>
+                <button dir="ltr" class="dv-close-button" id="closeModal">
+                    ): باشه
+                </button>
+            </div>
         </div>
-      </div>
     </div>
 
     <img src="./assets/images/blur-bg.png" class="dv-blur-bg" alt="blur bg" />
 
-    <script>
+    <!-- <script>
       const modal = document.getElementById("myModal");
       const openModalBtn = document.getElementById("openModal");
       const closeModalBtn = document.getElementById("closeModal");
@@ -412,6 +313,7 @@
           modal.style.display = "none";
         }
       };
-    </script>
-  </body>
+    </script> -->
+</body>
+
 </html>
